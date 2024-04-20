@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply text-[#242424] font-bold text-[48px];
+  }
+  h4 {
+    @apply text-[24px] font-semibold text-[#242424];
+  }
+  /* input[type="text"]::placeholder {
+    @apply font-light text-[#000] text-[16px];
+  } */
+}
+@layer components {
+  .text-style1 {
+    @apply text-[16px] text-[#3E3E3E] leading-6;
+  }
+  .text-style2 {
+    @apply font-light text-[16px] text-[#3E3E3E];
+  }
+  .text-style3 {
+    @apply font-normal text-[16px] text-[#262626];
+  }
+
+  .select-form-style {
+    @apply block appearance-none py-2 px-5 focus:outline-none  rounded-3xl text-[14px] font-medium text-[#2E2E2E] cursor-pointer;
+  }
+  .select-icon-style {
+    @apply pointer-events-none absolute top-0 bottom-0 my-auto right-3 flex items-center px-2 text-gray-700;
+  }
+}
+
+/* *{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+} */
+
+/*------------------------------- navbar border bottom animation start---------------------------- */
+.btn {
+  position: relative;
+  background-color: transparent;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid white;
+  margin-top: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+  transform: translate(-100px);
+  z-index: -1px;
+}
+.btn:hover::after {
+  transform: translate(0);
+}
+/*--------------------- navbar border bottom animation end-------------------------- */
+
+/*-------------------------- news section bottom slider swiper start-------------------------------- */
+.swiper {
+  padding: 100px 0px 50px 0px !important;
+  width: 100% !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 55px !important;
+  height: 55px !important;
+  background-color: #2f77e0;
+  border-radius: 50%;
+  color: #fff !important;
+  margin-top: 0px !important;
+  top: 10px !important;
+}
+
+.swiper-button-prev {
+  position: absolute !important;
+  right: 70px !important;
+  left: auto !important;
+}
+.swiper-button-prev::after {
+  font-size: 15px !important;
+}
+.swiper-button-next {
+  position: absolute !important;
+  right: 0px !important;
+  left: auto !important;
+}
+.swiper-button-next::after {
+  font-size: 15px !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+    right: 55px !important;
+  }
+  .swiper-button-next {
+    right: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .swiper {
+    padding: 70px 0px 50px 0px !important;
+    width: 100% !important;
+  }
+}
+.swiper-size {
+  padding: 40px 0px !important;
+  width: 100%;
+}
+/* -------------------------news section bottom slider swiper end ---------------------------*/
+
+/*--------------------------- latest blog section style start-----------------*/
+.slick-track {
+  padding-bottom: 80px !important;
+}
+
+.slick-dots {
+  bottom: 12px !important;
+}
+.slick-dots li button::before {
+  font-size: 15px !important;
+  color: #2f76de !important;
+  border: 2px solid #2f76de;
+  border-radius: 50%;
+}
+.custom-card {
+  width: 90% !important;
+  margin: auto !important;
+}
+/*--------------------------- latest blog section style end-----------------*/
